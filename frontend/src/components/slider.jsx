@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext'; // Import AuthContext
@@ -65,6 +66,7 @@ function Slider() {
     return () => {
       clearInterval(sliderInterval);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isRunning]);
 
   const handleNavigation = (path) => {
