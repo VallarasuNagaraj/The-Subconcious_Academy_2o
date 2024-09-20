@@ -10,10 +10,10 @@ const SquishyCard = () => {
   ];
 
   return (
-    <section className="px-12 py-12 ">
-      <div className="grid grid-cols-4 gap-96 max-w-screen-lg">
+    <section className="px-8 py-12 ml-6">
+      <div className="grid grid-cols-4 gap-16 ">
         {cardData.map((data, index) => (
-          <Card key={index} title={data.title} description={data.description} />
+          <Card key={index} title={data.title} description={data.description}/>
         ))}
       </div>
     </section>
