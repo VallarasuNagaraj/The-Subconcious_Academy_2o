@@ -26,10 +26,10 @@ function CandidateGrid() {
     <>
     <Slider/>
     <div className="mx-auto px-32 py-8">
-    <h1 className='font_style text-6xl text-center'>
-      Placement <span className='text-primary_color_gold'>Candidates List</span>
+    <h1 className='font_style text-6xl sm:text-3xl text-center sm:ml-[-50px] sm:mt-9'>
+      Placement <span className='text-primary_color_gold font_style'>Candidates List</span>
     </h1>
-    <div className="grid grid-cols-1 gap-6 mt-8">
+    <div className="grid grid-cols-3 sm:grid-cols-1 sm:w-[300px] sm:ml-[-90px] gap-6 mt-8">
       {candidates.map((candidate, index) => (
         <div 
           key={index} 

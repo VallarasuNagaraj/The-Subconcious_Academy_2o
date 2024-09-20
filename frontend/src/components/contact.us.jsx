@@ -63,7 +63,7 @@ function ContactUs() {
   return (
     <>
     <div className="min-h-screen flex justify-center items-center p-4 bg-[url('../src/assets/img1.jpg')] bg-repeat-x bg-cover">
-      <div className="max-w-4xl w-full grid grid-cols-2 gap-8">
+      <div className="max-w-4xl w-full grid grid-cols-2 sm:grid-cols-1 gap-8">
         <div className="p-2 rounded-lg shadow-2xl wrapper">
           <h2 className="text-2xl text-white font-extrabold text-center mb-4">Get In Touch</h2>
           <p className="mb-6 text-white text-center font-bold">

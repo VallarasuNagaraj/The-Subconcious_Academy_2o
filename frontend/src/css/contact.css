@@ -13,3 +13,12 @@
 option{
   background-color: black;
 }
+
+@media screen and (min-width:360px) and (max-width:550px){
+  .wrapper{
+    border: 1px solid #fff;
+  /* backdrop-filter: blur(10px); */
+  color: white;
+   font-size: 15px;
+}
+}

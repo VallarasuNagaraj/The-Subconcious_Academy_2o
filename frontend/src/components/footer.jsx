@@ -2,7 +2,7 @@ import "../css/home.style.css";
 
 function Footer(){
     return(
-        <footer className="bg-black w-full">
+        <footer className="bg-white text-black">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <div className="flex justify-center">
             <img

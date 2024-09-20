@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext'; // Import AuthContext
@@ -9,6 +7,7 @@ function Slider() {
   const { user, logout } = useContext(AuthContext); // Get user details and logout function
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isRunning] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // New state for menu toggle
   const navigate = useNavigate();
 
   const images = [
@@ -66,7 +65,7 @@ function Slider() {
     return () => {
       clearInterval(sliderInterval);
     };
-  }, [isRunning, nextSlide]);
+  }, [isRunning]);
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -77,18 +76,33 @@ function Slider() {
     navigate('/login'); // Redirect to login page after logout
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle the state
+  };
+
   return (
     <>
       <header>
-        <img className="w-32" src="./src/assets/logo.png" alt="Logo" />
-        <nav>
+        <img className="w-32 sm:w-[80px]" src="./src/assets/logo.png" alt="Logo" />
+        
+        {/* Burger icon to toggle menu */}
+        <label className="burger hidden sm:block sm:mt-12"  htmlFor="burger" >
+          <input type="checkbox" id="burger" onClick={toggleMenu} />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        {/* Navigation menu */}
+        <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}> {/* Add active class when menu is open */}
           <NavLink to="/">Home</NavLink>
           <NavLink to="/About.us">About Us</NavLink>
           <NavLink to="/courses">Courses</NavLink>
           <NavLink to="/Candidate.list">Placement Candidates</NavLink>
           <NavLink to="/Contact.us">Contact Us</NavLink>
         </nav>
-        <span className='flex gap-4'>
+
+        <span className={`flex gap-4 sm:hidden ${isMenuOpen ? 'active' : ''}`}>
           {user ? (
             <>
               <span>Welcome, {user.name}</span>

@@ -26,7 +26,7 @@ function Course() {
       <Slider />
       <div className="font-sans">
         {/* Hero Section */}
-        <section className="text-center py-16 ">
+        <section className="text-center py-16 w-[80%] mx-auto">
           <h1 className="text-6xl font-bold font_style">
             Together Towards <span className='text-primary_color_gold font_style'>Excellence</span>
           </h1>
@@ -35,39 +35,39 @@ function Course() {
         </section>
 
         {/* Main Image */}
-        <section className="py-8">
-          <img src="./src/assets/bg1.png" alt="Main" className="w-[1400px] h-[600px] mx-auto rounded-[10px]" />
+        <section className="py-8 sm:w-[80%]  sm:mx-auto">
+          <img src="./src/assets/bg1.png" alt="Main" className="w-[1400px] sm:h-[300px] h-[600px] mx-auto rounded-[10px]" />
         </section>
 
         {/* Info Section */}
-        <section className="mt-[100px] px-32">
+        <section className="mt-[100px] sm:w-[100%] px-32 sm:px-0">
           <div className="mx-auto text-center">
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-8 sm:w-[80%] sm:mx-auto">
               <div className="p-12 rounded shadow">
                 <h3 className="text-2xl font-bold">Developers and Designers</h3>
-                <p className='text-base'>Selected from the best, from the top MNC IT Companies</p>
+                <p className='text-base sm:mt-3' >Selected from the best, from the top MNC IT Companies</p>
               </div>
               <div className="p-12 rounded shadow">
                 <h3 className="text-2xl font-bold">Over 4000 hours of classes</h3>
-                <p className='text-base'>A significant volume of classes to ensure maximum success.</p>
+                <p className='text-base sm:mt-3'>A significant volume of classes to ensure maximum success.</p>
               </div>
               <div className="p-12 rounded shadow">
-                <h3 className="text-2xl font-bold">Over 200 students supported</h3>
-                <p className='text-base'>Individual attention for each student.</p>
+                <h3 className="text-2xl font-bold sm:ml-[-10px]">Over 200 students supported</h3>
+                <p className='text-base mt-3'>Individual attention for each student.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mt-32">
+        <section className="mt-32 sm:mt-12">
           <div className="mx-auto px-32">
-            <h2 className="text-5xl font-bold text-center font_style">
+            <h2 className="text-5xl font-bold text-center font_style ">
               Our Course <span className='text-primary_color_gold font_style'>Offerings</span>
             </h2>
-            <div className="grid grid-cols-1 gap-8 mt-8">
+            <div className="grid grid-cols-3 sm:text-center sm:w-[300px] sm:ml-[-80px] sm:grid-cols-1 gap-8 mt-8">
               {/* Course Cards */}
-              <div className="shadow-md rounded-lg border-2" data-aos="zoom-in-up">
-                <img src="./src/assets/mern.webp" alt="MERN Stack Developer" className="w-full h-48 object-fill" />
+              <div className="shadow-md rounded-lg border-2 " data-aos="zoom-in-up">
+                <img src="./src/assets/mern.webp" alt="MERN Stack Developer" className="w-full  h-48 object-fill" />
                 <div className="p-6">
                   <h3 className="text-xl font-bold">MERN Stack Developer</h3>
                   <p className="mt-2">Course description here. (21h)</p>

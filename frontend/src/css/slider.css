@@ -206,6 +206,8 @@ header button{
     border-radius: 30px;
     animation: showImage .5s linear 1 forwards;
 }
+
+
 @keyframes showImage{
     to{
         bottom: 0;
@@ -359,18 +361,104 @@ header button{
       100% {transform:translateX(100%);}
   }
 
+  .burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+ .burger {
+  cursor: pointer;
+  display: none;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+
+  
+
   @media screen and (min-width:360px) and (max-width:550px){
     body{
-        max-width: 360px;
-        background: #071540;
+        background: black;
     }
+    
     .carousel{
         display: none;
     }
-    nav {
+    .nav-links {
         display: none;
-    }
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        width: 400px;
+        margin-top: 400px;
 
+      }
+      
+      /* Show navigation when menu is active */
+      .nav-links.active {
+        display: block;
+        opacity: 1;
+      }
+      .nav-links {
+        display: flex;
+        position: absolute;
+        margin-bottom: -300px;
+        right: -30px;
+        background-color: #333;
+        align-items: center;
+        width: 380px;
+        height: 500px;
+        justify-content: center;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+    
   }
   
 

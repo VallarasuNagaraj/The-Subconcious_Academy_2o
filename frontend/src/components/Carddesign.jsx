@@ -10,8 +10,8 @@ const SquishyCard = () => {
   ];
 
   return (
-    <section className="px-8 py-12 ml-6">
-      <div className="grid grid-cols-4 gap-16 ">
+    <section>
+      <div className="grid grid-cols-4 sm:grid-cols-1 sm:gap-y-10 justify-items-center">
         {cardData.map((data, index) => (
           <Card key={index} title={data.title} description={data.description}/>
         ))}

@@ -12,22 +12,22 @@ function Homebody(){
       }, []);
     return(
         <>       
-         <div className="mx-auto w-[263PX] our_service_col display_none">
-        <h1 className="text-6xl font_style font-extrabold display_none">
+         <div className="text-center w-[100%]">
+        <h1 className="text-6xl font_style font-extrabold sm:mt-12">
           Our <span className="text-primary_color_gold font_style">Services</span>
         </h1>
       </div>
       <br />
-      <p className="text-xl mx-[298px] our_service_col_para display_none">
+      <p className="text-xl w-[100%] text-center sm:w-72 sm:mx-auto">
         There are many variations of passages of Lorem Ipsum available, but the
         majority have suffered alteration
-      </p>
+      </p>  
       <br />
-      <div className="w-[100%] h-[350px] mx-auto grid grid-flow-col gap-10 content-center justify-center service_container">
-        <div className="services w-[465px] display_none">
+      <div className="w-[100%] h-[350px] mx-auto grid grid-flow-col sm:mt-[-100px] sm:grid-flow-row sm:h-[1000px] gap-10 content-center justify-center service_container">
+        <div className="services w-[465px] sm:w-[350px]">
           <img
             src="./src/assets/dev.webp"
-            className="w-[350px] h-[150px]"
+            className="w-[350px] h-[150px] sm:w-80 sm:h-40"
             alt=""
           />
           <h2>Development</h2>
@@ -35,9 +35,9 @@ function Homebody(){
             fact that a reader will be distracted by the readable content of a
             page when looking at its layout. The point of using
           </p>
-          <button className="gold-button shine-button">Read More</button>
+          <button className="gold-button shine-button sm:hidden">Read More</button>
         </div>
-        <div className="services w-[465px] display_none">
+        <div className="services w-[465px] sm:w-[350px]">
           <img
             src="./src/assets/ui.webp"
             className="w-[200px] h-[140px] bg-transparent"
@@ -48,9 +48,9 @@ function Homebody(){
             fact that a reader will be distracted by the readable content of a
             page when looking at its layout. The point of using
           </p>
-          <button className="gold-button shine-button">Read More</button>
+          <button className="gold-button shine-button sm:hidden">Read More</button>
         </div>
-        <div className="services w-[465px] display_none">
+        <div className="services w-[465px] sm:w-[350px]">
           <img
             src="./src/assets/it.webp"
             className="w-[200px] h-[140px]"
@@ -61,21 +61,21 @@ function Homebody(){
             fact that a reader will be distracted by the readable content of a
             page when looking at its layout. The point of using
           </p>
-          <button className="gold-button shine-button">Read More</button>
+          <button className="gold-button shine-button sm:hidden">Read More</button>
         </div>
       </div>{" "}
       <br />
       <br />
       <br />
-      <div className="mx-auto w-[325px] font_style display_none">
+      <div className="text-center w-[100%] font_style sm:mt-[-80px]">
         <h1 className="text-6xl font_style">
           Why <span className="text-primary_color_gold font_style">Choose</span> Us
         </h1>{" "}
         <br /><br />
       </div>
       <SquishyCard/>
-      <div className="wrapper2 display_none border-2 rounded-2xl w-[1400px] mx-auto mt-[80px]">
-        <h1 className="text-7xl mx-auto w-[243px] mt-8 font_style">
+      <div className="wrapper2 border-2 rounded-2xl w-[1400px] sm:w-[330px] sm:border-0 mx-auto mt-[80px]">
+        <h1 className="text-7xl text-center w-[100%] mt-8 font_style">
           Our <span className="text-primary_color_gold font_style">Team</span>
         </h1>
         <div className="team gap-4 mt-20">
@@ -143,16 +143,16 @@ function Homebody(){
       </div>
       <br />
       <br /><br />
-      <div className="mx-auto w-[472px] display_none">
+      <div className="text-center w-[100%] ">
         <h1 className="text-6xl mb-10 font_style">
           Plans and{" "}
           <span className="text-primary_color_gold font_style">Subscription</span>
         </h1>
       </div>
-      <div className="w-[1300px] mx-auto flex justify-between cards display_none">
-        <div className="w-[600px] grid gap-y-7 display_none justify-center mx-auto">
+      <div className="w-[100%] mx-auto flex sm:grid justify-between cards">
+        <div className="w-[50%] grid gap-y-7 justify-center mx-auto sm:w-[50%]">
           <div
-            className="w-[500px] h-[350px] plans display_none "
+            className="w-[500px] h-[350px] plans sm:h-[300px] sm:w-[100%]"
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
@@ -160,8 +160,9 @@ function Homebody(){
             <h1>Personal Plan</h1>
             <p>Starting at ₹850 per month</p>
             <p>Billed monthly or annually. Cancel anytime.</p>
-            <button className="gold-button shine-button">Start Subscribe</button>
-            <ul>
+            <button className="hidden gold-button shine-button sm:block">Read More</button>
+            <button className="gold-button shine-button ">Start Subscribe</button>
+            <ul className="sm:hidden">
               <li>Access to 11,000+ top courses</li>
               <li>Certification prep</li>
               <li>Goal-focused recommendations</li>
@@ -181,7 +182,7 @@ function Homebody(){
             />
           </div>
           <div
-            className="w-[500px] h-[350px] plans display_none"
+            className="w-[500px] h-[350px] plans sm:h-[300px] sm:w-[100%]"
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
@@ -189,8 +190,10 @@ function Homebody(){
             <h1>Team Plan</h1>
             <p>Starting at ₹1850 per month</p>
             <p>Billed monthly or annually. Cancel anytime.</p>
+            <button className="hidden gold-button shine-button sm:block">Read More</button>
             <button className="gold-button shine-button">Start Subscribe</button>
-            <ul>
+           
+            <ul className="sm:hidden">
               <li>Access to 11,000+ top courses</li>
               <li>Certification prep</li>
               <li>Goal-focused recommendations</li>
@@ -199,7 +202,7 @@ function Homebody(){
             </ul>
           </div>
         </div>
-        <div className="w-[600px] grid gap-y-7 justify-center mx-auto display_none">
+        <div className="w-[50%] grid gap-y-7 justify-center mx-auto sm:w-[50%]">
           <div
             className="w-[500px] h-[350px] plans display_none"
             data-aos="fade-left"
@@ -213,7 +216,7 @@ function Homebody(){
             />
           </div>
           <div
-            className="w-[500px] h-[350px] plans display_none"
+            className="w-[500px] h-[350px] plans sm:h-[300px] sm:w-[100%] sm:mt-6"
             data-aos="fade-left"
             data-aos-offset="500"
             data-aos-duration="500"
@@ -221,8 +224,9 @@ function Homebody(){
             <h1>Enterprise Plan</h1>
             <p>Conatact Sales For Pricing</p>
             <p>Billed monthly or annually. Cancel anytime.</p>
+            <button className="hidden gold-button shine-button sm:block">Read More</button>
             <button className="gold-button shine-button">Start Subscribe</button>
-            <ul>
+            <ul className="sm:hidden">
               <li>Access to 11,000+ top courses</li>
               <li>Certification prep</li>
               <li>Goal-focused recommendations</li>

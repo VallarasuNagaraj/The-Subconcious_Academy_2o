@@ -44,7 +44,8 @@ function Registration() {
   };
 
   return (
-    <div className='registration_container'>
+     
+    <div className="min-h-screen flex justify-center items-center p-4 bg-[url('../src/assets/img1.jpg')] bg-repeat-x bg-cover">
       <div className="wrapper3">
         <form onSubmit={handleSubmit}>
           <h2 className='text-2xl'>Register and Get a New Account</h2>

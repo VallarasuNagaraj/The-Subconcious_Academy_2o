@@ -35,7 +35,7 @@ export default {
       },
 
       screens: {
-        'sm': {'min': '320px', 'max': '599px'},
+        'sm': {'min': '360px', 'max': '550px'},
         'md': {'min': '600px', 'max': '768px'}, 
         'lg': '1024px',
         'xl': '1280px',
