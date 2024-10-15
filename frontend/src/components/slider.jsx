@@ -87,15 +87,7 @@ function Slider() {
       <header>
         <img className="w-32 sm:w-[80px]" src="./src/assets/logo.png" alt="Logo" />
         
-        {/* Burger icon to toggle menu */}
-        <label className="burger hidden sm:block sm:mt-12"  htmlFor="burger" >
-          <input type="checkbox" id="burger" onClick={toggleMenu} />
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        {/* Navigation menu */}
+         {/* Navigation menu */}
         <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}> {/* Add active class when menu is open */}
           <NavLink to="/">Home</NavLink>
           <NavLink to="/About.us">About Us</NavLink>
@@ -104,7 +96,7 @@ function Slider() {
           <NavLink to="/Contact.us">Contact Us</NavLink>
         </nav>
 
-        <span className={`flex gap-4 sm:hidden ${isMenuOpen ? 'active' : ''}`}>
+        <span className={`flex gap-4 ${isMenuOpen ? 'active' : ''}`}>
           {user ? (
             <>
               <span>Welcome, {user.name}</span>
@@ -118,13 +110,13 @@ function Slider() {
           ) : (
             <>
               <button 
-                className='w-[90px] h-[30px] gold-button shine-button'
+                className='w-[90px] h-[30px] gold-button shine-button nav_bt1'
                 onClick={() => handleNavigation('/login')}
               >
                 Sign in
               </button>
               <button 
-                className='w-[90px] h-[30px] gold-button shine-button'
+                className='w-[90px] h-[30px] gold-button shine-button nav_bt1'
                 onClick={() => handleNavigation('/registration')}
               >
                 Sign up
@@ -132,6 +124,14 @@ function Slider() {
             </>
           )}
         </span>
+
+            {/* Burger icon to toggle menu */}
+            <label className="burger hidden sm:block sm:mt-12 sm:ml-5"  htmlFor="burger" >
+          <input type="checkbox" id="burger" onClick={toggleMenu} />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </header>
 
       {/* Carousel */}

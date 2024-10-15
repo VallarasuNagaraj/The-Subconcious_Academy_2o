@@ -427,12 +427,24 @@ header button{
     body{
         background: black;
     }
+
+    header span{
+        display: block;
+    }
+
+    header img {
+        margin-left: -20px;
+    }
+
+    header span .nav_bt1{
+     width: 70px;
+    }
     
     .carousel{
         display: none;
     }
     .nav-links {
-        display: none;
+        display: grid;
         opacity: 0;
         transition: opacity 0.5s ease;
         width: 400px;
@@ -442,19 +454,19 @@ header button{
       
       /* Show navigation when menu is active */
       .nav-links.active {
-        display: block;
+        display: grid;
         opacity: 1;
+
       }
-      .nav-links {
-        display: flex;
+      .nav-links {        
         position: absolute;
-        margin-bottom: -300px;
+        margin-bottom: -250px;
         right: -30px;
-        background-color: #333;
-        align-items: center;
+        background-color: #333;     
         width: 380px;
         height: 500px;
         justify-content: center;
+        text-align: center;
         transition: all 0.5s ease;
         z-index: 1;
       }
